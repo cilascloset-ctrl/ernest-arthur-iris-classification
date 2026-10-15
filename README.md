@@ -1,4 +1,4 @@
-# Task 1: Iris Flower Classification — Ernest Arthur
+# Task 1 - Iris Flower Classification — Ernest Arthur
 
 This repository contains my **AI & Machine Learning Task 1: Classification Model on a Standard Dataset**.
 
