@@ -4,6 +4,10 @@
 **Dataset:** Twitter US Airline Sentiment (CrowdFlower/Figure Eight; February 2015)
 **Goal:** Classify customer tweets as **positive**, **negative**, or **neutral**.
 
+## Verified test result
+
+**Accuracy: 76.72%** on 2,835 held-out tweets (11,336 training examples); **macro F1: 66.02%**. This was measured by a successful GitHub Actions run. See [EVALUATION.md](EVALUATION.md) for the full assignment report, per-class metrics, confusion matrix, and limitations.
+
 ## Assignment requirements covered
 
 1. **Dataset:** Airline customer tweets labeled positive, negative, or neutral.
