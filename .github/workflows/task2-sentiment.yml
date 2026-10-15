@@ -1,0 +1,33 @@
+name: Task 2 - Sentiment Analysis
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Task_2_Sentiment_Analysis/**'
+      - '.github/workflows/task2-sentiment.yml'
+  workflow_dispatch:
+
+jobs:
+  train-and-evaluate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: Task_2_Sentiment_Analysis/requirements.txt
+      - name: Install dependencies
+        run: python -m pip install -r Task_2_Sentiment_Analysis/requirements.txt
+      - name: Train model and print measured accuracy
+        run: python Task_2_Sentiment_Analysis/sentiment_analysis.py
+      - name: Upload evaluation results and model
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: task2-sentiment-results
+          path: Task_2_Sentiment_Analysis/results/
+          if-no-files-found: warn

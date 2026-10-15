@@ -58,3 +58,11 @@ The program will create:
 ## Dataset
 The script uses the Iris dataset included with Scikit-learn. A separately hosted version of the standard dataset is also available on Kaggle:
 https://www.kaggle.com/datasets/uciml/iris
+
+---
+
+## Task 2 — Sentiment Analysis on Text Data
+
+The second AI/ML assignment is now in [Task_2_Sentiment_Analysis](Task_2_Sentiment_Analysis/README.md).
+It classifies airline customer feedback into **positive, negative, and neutral** using text cleaning, TF-IDF and Logistic Regression. The Task 2 README explains running the classifier, downloading the real dataset, evaluating accuracy and limitations.
+
